@@ -1,36 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Jovan Haryanto</title>
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Document</title>
+    <!-- Tailwind CSS CDN -->
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <header>
+    <header class="main-header">
     <!-- logo Website -->
-        <div></div>
+        <div class="logo-icon"></div>
 
         <!--navbar website-->
         <nav>
-            <ul>
-                <li><a href="#about">Home</a></li>
-                <li><a href="#projects">Our Profile</a></li>
-                <li><a href="#projects">Portfolio</a></li>
-                <li><a href="#contact">Message Us</a></li>
+            <ul class="flex">
+                <li><a class="border px-8" href="#home">Home</a></li>
+                <li><a class="border px-8" href="#our-profile">Our Profile</a></li>
+                <li><a class="border px-8" href="#portfolio">Portfolio</a></li>
+                <li><a class="border px-8" href="#message-us">Message Us</a></li>
             </ul>
         </nav>
     </header>
-    <main>
 
+    <hr>
+    
+    <main>
+<!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h1 id="welcome-message">Hi, Welcome To Jovan Haryanto's Portfolio</h1>
+            <p>Ini adalah website latihan pertama</p>
+            <div class="banner">[ Banner Image ]</div>
+        </section>
+<hr> 
+        <!-- Our Headquarter -->
+        <section id="headquarter" class="headquarter">
+            <h2>Our Headquarter</h2>
+            <div class="cities">
+                <div class="city">
+                    <div class="circle"></div>
+                    <p>Jakarta</p>
+                </div>
+                <div class="city">
+                    <div class="circle"></div>
+                    <p>Bandung</p>
+                </div>
+                <div class="city">
+                    <div class="circle"></div>
+                    <p>Surabaya</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Us -->
+        <section id="message-us" class="message-us">
+            <h2>Message Us</h2>
+            <div class="form-container">
+                <!-- Form -->
+                <form id="message-form">
+                    <label>Nama:</label>
+                    <input type="text" id="name" required>
+
+                    <label>Tanggal Lahir:</label>
+                    <input type="date" id="birthdate" required>
+
+                    <label>Jenis Kelamin:</label>
+                    <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+                    <input type="radio" name="gender" value="Perempuan"> Perempuan
+
+                    <label>Pesan:</label>
+                    <textarea id="message" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+
+                <!-- Output -->
+                <div class="output" id="output-box">
+                    <p><strong>Current time:</strong> <span id="current-time"></span></p>
+                    <p><strong>Nama:</strong> <span id="out-name"></span>Jovan Haryanto</span></p>
+                    <p><strong>Tanggal Lahir:</strong> <span id="out-birthdate"></span>12 Juli 2008</p>
+                    <p><strong>Jenis Kelamin:</strong> <span id="out-gender"></span>Laki-laki</p>
+                    <p><strong>Pesan:</strong> <span id="out-message"></span>Belajar buat website</p>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        
-    </footer>
+    <!-- Footer -->
+<footer>
+    <p>Created by Jovan Haryanto</p>
+</footer>
     <!-- JS External -->
     <script src="js/script.js"></script>
 </body>
